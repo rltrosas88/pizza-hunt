@@ -1,9 +1,6 @@
 //18.1.5 step ONE import the dpendencies
 const { Schema, model } = require('mongoose');
 
-//18.1.5 step THREE create the Pizza model using the PizzaSchema
-const Pizza = model('Pizza', PizzaSchema);
-
 //18.1.5 step TWO add the schema using the Schema constructor imported from Mongoose and 
     //define the fields with specific data types
 const PizzaSchema = new Schema({
@@ -34,6 +31,8 @@ const PizzaSchema = new Schema({
         //colld specify Array in place of the brackets
     toppings: []
   });
+//18.1.5 step THREE create the Pizza model using the PizzaSchema
+const Pizza = model('Pizza', PizzaSchema);
 
 //18.1.5 step FOUR export the Pizza model
 module.exports = Pizza;
